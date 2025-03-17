@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>発達障害・精神疾患対応アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>職場のメンタルヘルス対応ガイド</h1>
+
+    <label for="disorder">疾患を選択:</label>
+    <select id="disorder" onchange="updateInfo()">
+        <option value="">選択してください</option>
+        <option value="adhd">①発達障害</option>
+        <option value="pd">②性格障害</option>
+        <option value="depression">③うつ病</option>
+        <option value="bipolar">④双極性障害</option>
+    </select>
+
+    <div id="info">
+        <h2>疾患の説明と原因</h2>
+        <p id="description"></p>
+
+        <h2>職場対応</h2>
+        <ul>
+            <li><strong>コミュニケーション戦略:</strong> <span id="comm"></span></li>
+            <li><strong>相談経路・環境調整:</strong> <span id="adjustment"></span></li>
+            <li><strong>タスク管理:</strong> <span id="task"></span></li>
+            <li><strong>強みと人事配置:</strong> <span id="strength"></span></li>
+            <li><strong>予想される問題・トラブル:</strong> <span id="trouble"></span></li>
+            <li><strong>対処方法・言葉かけ:</strong> <span id="response"></span></li>
+            <li><strong>個別サポート戦略:</strong> <span id="support"></span></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
