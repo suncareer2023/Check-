@@ -1,0 +1,58 @@
+const disorderData = {
+    "adhd": {
+        description: "発達障害とは、神経発達に関連する障害で、注意欠陥、多動、衝動性などが特徴。",
+        comm: "簡潔で具体的な指示を出す。視覚的な補助を使う。",
+        adjustment: "静かな作業環境を提供し、ノイズキャンセリング機能を活用。",
+        task: "ToDoリストを活用し、小さなステップに分ける。",
+        strength: "創造性や集中力の高さを活かせる業務配置。",
+        trouble: "指示を忘れる、締め切りを守れない。",
+        response: "リマインダー機能やメンター制度を活用する。",
+        support: "定期的なフィードバックと業務サポートを提供。"
+    },
+    "pd": {
+        description: "性格障害は、長期間にわたる認知・感情・対人関係のパターンの問題が特徴。",
+        comm: "共感を示しながら対応し、境界を明確にする。",
+        adjustment: "明確なルールと職場のガイドラインを設定。",
+        task: "タスクの優先順位を明確にし、サポートをつける。",
+        strength: "交渉力や独創的な視点を活かせる配置。",
+        trouble: "対人トラブル、感情的な反応。",
+        response: "冷静に対応し、適切なフィードバックを提供。",
+        support: "メンタルサポートとストレス管理の機会を用意。"
+    },
+    "depression": {
+        description: "うつ病は、持続的な抑うつ気分や興味・意欲の低下が特徴。",
+        comm: "プレッシャーを与えず、安心感を持たせる。",
+        adjustment: "業務負担を調整し、柔軟な働き方を提供。",
+        task: "短時間集中の業務スタイルを取り入れる。",
+        strength: "慎重で丁寧な作業ができる。",
+        trouble: "業務の遅延、欠勤が増える。",
+        response: "無理のない範囲での業務調整を行う。",
+        support: "カウンセリングや相談窓口を設置。"
+    },
+    "bipolar": {
+        description: "双極性障害は、躁状態とうつ状態が交互に現れる。",
+        comm: "感情の変動に合わせた柔軟な対応が必要。",
+        adjustment: "安定した業務環境を提供し、業務の波を調整。",
+        task: "躁状態のときは慎重に、うつ状態のときは負担を軽減。",
+        strength: "エネルギッシュで発想力に優れる。",
+        trouble: "業務の波が激しく、突発的な行動がある。",
+        response: "安定を重視し、定期的な業務レビューを行う。",
+        support: "心理サポートと医療との連携を図る。"
+    }
+};
+
+function updateInfo() {
+    let disorder = document.getElementById("disorder").value;
+    let info = disorderData[disorder];
+    
+    if (info) {
+        document.getElementById("description").textContent = info.description;
+        document.getElementById("comm").textContent = info.comm;
+        document.getElementById("adjustment").textContent = info.adjustment;
+        document.getElementById("task").textContent = info.task;
+        document.getElementById("strength").textContent = info.strength;
+        document.getElementById("trouble").textContent = info.trouble;
+        document.getElementById("response").textContent = info.response;
+        document.getElementById("support").textContent = info.support;
+    }
+}
